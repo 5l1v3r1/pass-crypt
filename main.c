@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-const char* HELP = "encryptor-help:\n\n--encrypt: will encrypt your text\n--decrypt: will decrypt your text\n";
+const char* HELP = "encryptor-help:\n\n--encrypt: will encrypt your text\n--decrypt: will decrypt your text\n--seed: will define a seed\n";
 unsigned int seed = 300; //DEFAULT SEED
 
 char* decrypt(const char* text);
