@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-
+const char* HELP = "R(
+    Arguments for 
+)";
 
 
 char* decrypt(const char* text);
@@ -30,9 +32,11 @@ char* encrypt(const char *text){
 
 int main(int argc, char** argv){
     for(unsigned int i = 0; i < argc; i++){
-        if(!strcmp(argv[i], "encrypt"))
+        if(!strcmp(argv[i], "--encrypt"))
         {char* d = argv[(i+1)]; printf("Encrypted: %s\n\r", encrypt(d));i++;};
-        if(!strcmp(argv[i], "decrypt"))
+        if(!strcmp(argv[i], "--decrypt"))
         {char* d = argv[(i+1)]; printf("Decrypted: %s\n\r", decrypt(d));i++;};
+        if(!strcmp(argv[i], "--help"))
+        {printf("%s")};
     }
 }
